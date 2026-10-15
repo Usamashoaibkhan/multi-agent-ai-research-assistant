@@ -1,0 +1,23 @@
+[project]
+name = "multi-agent-research-assitant"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "usamashoaibkhan", email = "usamashoaibkhan22@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "langchain-groq==0.2.3",
+    "langgraph==0.2.60",
+    "pydantic==2.10.4",
+    "python-dotenv==1.0.1",
+    "tavily-python==0.5.0",
+]
+
+[project.scripts]
+multi-agent-research-assitant = "multi_agent_research_assitant:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
