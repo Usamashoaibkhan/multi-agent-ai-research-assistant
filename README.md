@@ -1,160 +1,197 @@
 
 <div align="center">
 
-# MULTI-AGENT AI RESEARCH ASSISTANT
+# 🚀 MULTI-AGENT AI RESEARCH ASSISTANT
 
-### 🤖 RESEARCH SMARTER. THINK DEEPER. VERIFY BETTER.
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=28&duration=2200&pause=500&color=00D9FF&center=true&vCenter=true&width=900&height=100&lines=RESEARCH+SMARTER.;THINK+DEEPER.;VERIFY+BETTER.;MULTIPLE+AGENTS.+ONE+MISSION." alt="Animated project title" />
 
-**An AI-powered research system built with multiple specialized agents.**
-
-Search the web • Gather evidence • Generate answers • Validate sources
-
-<br/>
+### 🤖 INTELLIGENT RESEARCH • 🌐 WEB SEARCH • ✅ FACT VALIDATION
 
 ![Python](https://img.shields.io/badge/PYTHON-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![LangGraph](https://img.shields.io/badge/LANGGRAPH-MULTI--AGENT-1C3C3C?style=for-the-badge)
+![LangGraph](https://img.shields.io/badge/LANGGRAPH-MULTI--AGENT-8B5CF6?style=for-the-badge)
 ![Groq](https://img.shields.io/badge/AI-GROQ-F55036?style=for-the-badge)
-![Tavily](https://img.shields.io/badge/SEARCH-TAVILY-00A67E?style=for-the-badge)
+![Tavily](https://img.shields.io/badge/SEARCH-TAVILY-00C896?style=for-the-badge)
 ![Pydantic](https://img.shields.io/badge/DATA-PYDANTIC-E92063?style=for-the-badge)
 
 <br/>
 
-**⚡ INTELLIGENT RESEARCH | 🌐 LIVE WEB SEARCH | ✅ SOURCE VALIDATION**
+<img src="https://img.shields.io/badge/01-PLAN-00D9FF?style=for-the-badge&labelColor=101426" />
+<img src="https://img.shields.io/badge/02-RESEARCH-8B5CF6?style=for-the-badge&labelColor=101426" />
+<img src="https://img.shields.io/badge/03-WRITE-F97316?style=for-the-badge&labelColor=101426" />
+<img src="https://img.shields.io/badge/04-VERIFY-22C55E?style=for-the-badge&labelColor=101426" />
 
 </div>
 
 ---
 
-# `01` — 🎯 THE PROJECT
+# `01` — 🎯 PROJECT OVERVIEW
 
-## **Research powered by collaboration, not a single agent.**
+### Research smarter. Not harder.
 
-The **Multi-Agent AI Research Assistant** is a Python-based application that uses multiple AI agents to research questions, collect web sources, write answers, and validate whether the results are supported by the gathered evidence.
+The **Multi-Agent AI Research Assistant** is a Python-based AI application that uses multiple specialized agents to research questions, gather web sources, generate answers, and validate whether those answers are supported by available evidence.
 
-Instead of depending on one agent for everything, the system divides the research process into specialized tasks.
+Instead of relying on a single agent for every task, the system divides research into specialized steps. Each agent contributes to a shared workflow managed by LangGraph.
 
-### ✨ CORE FEATURES
+### ✨ KEY FEATURES
 
-- 🤖 **Multi-Agent Architecture** — Specialized agents collaborate on one task.
-- 🌐 **Web Research** — Retrieves relevant information through Tavily.
+- 🤖 **Multi-Agent Architecture** — Specialized agents work together.
+- 🌐 **Web Research** — Retrieves relevant information using Tavily.
 - 🧠 **AI Reasoning** — Uses Groq-powered language models.
-- ✍️ **Automated Writing** — Generates structured research answers.
-- 🛡️ **Source Validation** — Checks whether answers are grounded in collected evidence.
-- 🔄 **Self-Correction** — Allows limited revisions when an answer needs improvement.
+- ✍️ **Automated Writing** — Produces structured research answers.
+- 🛡️ **Answer Validation** — Checks answers against gathered evidence.
+- 🔄 **Self-Correction** — Supports limited revisions when needed.
+- ⛓️ **Workflow Control** — Routes tasks between agents and limits revision cycles.
 
 ---
 
-# `02` — ⚙️ HOW THE SYSTEM WORKS
+# `02` — ⚙️ HOW IT WORKS
+
+<div align="center">
+
+### FROM QUESTION TO VERIFIED ANSWER
+
+</div>
 
 ```mermaid
 flowchart TD
-    A["💬 USER QUESTION"] --> B["🧠 PLANNER AGENT"]
+    A(["💬 USER QUESTION"]) --> B["🧠 PLANNER AGENT"]
     B --> C["🌐 RESEARCHER AGENT"]
     C --> D["✍️ WRITER AGENT"]
     D --> E["🛡️ VALIDATOR AGENT"]
-    E -->|Grounded| F["✅ FINAL ANSWER"]
+    E -->|Grounded| F(["✅ FINAL ANSWER"])
     E -->|Needs Improvement| D
 
-    classDef input fill:#172554,stroke:#60A5FA,color:#FFFFFF,stroke-width:2px
+    classDef start fill:#172554,stroke:#38BDF8,color:#FFFFFF,stroke-width:2px
     classDef agent fill:#312E81,stroke:#A78BFA,color:#FFFFFF,stroke-width:2px
-    classDef validation fill:#064E3B,stroke:#34D399,color:#FFFFFF,stroke-width:2px
-    classDef output fill:#14532D,stroke:#4ADE80,color:#FFFFFF,stroke-width:2px
+    classDef check fill:#78350F,stroke:#FBBF24,color:#FFFFFF,stroke-width:2px
+    classDef finish fill:#065F46,stroke:#34D399,color:#FFFFFF,stroke-width:2px
 
-    class A input
+    class A start
     class B,C,D agent
-    class E validation
-    class F output
+    class E check
+    class F finish
 ```
 
-### 🔢 THE FOUR SPECIALIZED AGENTS
+### 🧠 THE FOUR SPECIALIZED AGENTS
 
-**01 — 🧠 PLANNER**
+<details>
+<summary><b>01 — Planner Agent</b></summary>
 
-Breaks the user's question into focused research queries.
+Analyzes the question and creates focused research queries.
 
-**02 — 🌐 RESEARCHER**
+</details>
 
-Searches the web and collects relevant information and sources.
+<details>
+<summary><b>02 — Researcher Agent</b></summary>
 
-**03 — ✍️ WRITER**
+Searches the web and gathers relevant information and source material.
 
-Uses the collected research to prepare a clear answer.
+</details>
 
-**04 — 🛡️ VALIDATOR**
+<details>
+<summary><b>03 — Writer Agent</b></summary>
 
-Checks whether the answer is supported by the available evidence and sends it back for improvement when necessary.
+Transforms the gathered research into a clear, structured answer.
 
-**↻ REVISION LOOP:** The workflow allows up to two revisions to improve an answer without creating an endless loop.
+</details>
+
+<details>
+<summary><b>04 — Validator Agent</b></summary>
+
+Checks whether the answer is supported by the available research and determines whether it needs improvement.
+
+</details>
+
+### 🔄 REVISION LOOP
+
+When an answer needs improvement, the workflow can send it back to the writer.
+
+The revision limit is **up to two revisions**, helping prevent endless retries.
 
 ---
 
 # `03` — 🧰 TECHNOLOGY STACK
 
-| TECHNOLOGY | ROLE IN THE PROJECT |
+| Technology | Role |
 |:---|:---|
-| 🐍 **Python 3.11** | Core application |
-| 🦜 **LangGraph** | Agent workflow and routing |
+| 🐍 **Python 3.11** | Core programming language |
+| 🦜 **LangGraph** | Agent orchestration and workflow routing |
 | ⚡ **Groq** | Language model inference |
 | 🌐 **Tavily** | Web search and research |
 | 📦 **Pydantic** | Structured data validation |
 
----
+### 🔗 OFFICIAL RESOURCES
 
-# `04` — 💡 WHY THIS PROJECT?
-
-### **MODULAR**
-Each agent has a specific responsibility, making the workflow easier to understand and maintain.
-
-### **EVIDENCE-BASED**
-The assistant uses retrieved sources to support its research answers.
-
-### **SELF-CORRECTING**
-The validator can request revisions when the generated response needs improvement.
-
-### **CONTROLLED**
-A revision limit helps prevent endless writer-validator cycles.
+- [Python](https://www.python.org/)
+- [LangGraph](https://www.langchain.com/langgraph)
+- [Groq Console](https://console.groq.com/)
+- [Tavily Dashboard](https://app.tavily.com/)
+- [Pydantic Documentation](https://docs.pydantic.dev/)
 
 ---
 
-# `05` — 📊 RESEARCH & EVALUATION
+# `04` — 💡 WHY MULTI-AGENT AI?
 
-The project includes an evaluation script to test the research workflow.
+<div align="center">
 
-Evaluation can report:
+| 🧩 SPECIALIZATION | 🌐 RESEARCH | 🛡️ VALIDATION |
+|:---:|:---:|:---:|
+| Dedicated roles for each task | Information retrieved from the web | Additional grounding checks |
 
-- 📚 Sources collected
-- 🔄 Revisions performed
-- ✅ Validator grounding results
+</div>
 
-Run the evaluation script from the project root:
+### WHAT MAKES IT USEFUL?
+
+- **Modular workflow:** Each agent has a defined responsibility.
+- **Evidence-based answers:** Retrieved sources provide material for the response.
+- **Iterative improvement:** The writer can revise answers when requested by the validator.
+- **Controlled execution:** A revision limit helps avoid an endless loop.
+
+> **Core idea:** Plan the research, gather evidence, write the answer, and check its grounding.
+
+---
+
+# `05` — 📊 EVALUATION
+
+The project includes an evaluation script for testing the agent workflow.
+
+Run it from the project root:
 
 ```bash
 python evals/run_evals.py
 ```
 
+Depending on the evaluation script, output may include:
+
+- 📚 Sources gathered
+- 🔄 Revisions performed
+- ✅ Validator grounding results
+
+Results depend on the configured models, available API services, and evaluation cases.
+
 ---
 
 # `06` — 🚀 QUICK START
 
-### **STEP 01 — OPEN THE PROJECT**
+### `STEP 01` — OPEN THE PROJECT
 
 Open the project folder in Visual Studio or a terminal.
 
-### **STEP 02 — CREATE & ACTIVATE ENVIRONMENT**
+### `STEP 02` — CREATE A VIRTUAL ENVIRONMENT
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-### **STEP 03 — INSTALL DEPENDENCIES**
+### `STEP 03` — INSTALL DEPENDENCIES
 
 ```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### **STEP 04 — CONFIGURE API KEYS**
+### `STEP 04` — CONFIGURE API KEYS
 
 Create a `.env` file in the project root:
 
@@ -163,20 +200,20 @@ GROQ_API_KEY=your_groq_api_key
 TAVILY_API_KEY=your_tavily_api_key
 ```
 
-Get your keys from:
+Get your keys from the official dashboards:
 
-- [Groq Console](https://console.groq.com/)
-- [Tavily Dashboard](https://app.tavily.com/)
+- [Get a Groq API key](https://console.groq.com/)
+- [Get a Tavily API key](https://app.tavily.com/)
 
-**Security:** Keep `.env` private and never publish your API keys.
+🔐 **Security:** Keep `.env` private. Never publish API keys in your repository.
 
-### **STEP 05 — RUN THE ASSISTANT**
+### `STEP 05` — RUN THE APPLICATION
 
 ```bash
 python -m src.multi_agent_research_assistant.app
 ```
 
-Enter your research question when prompted.
+When prompted with `Question:`, enter a research question.
 
 **Example:**
 
@@ -186,14 +223,40 @@ What are the latest developments in solid-state batteries?
 
 ---
 
+# `07` — 📁 PROJECT STRUCTURE
+
+```text
+multi-agent-research-assistant/
+│
+├── src/
+│   └── multi_agent_research_assistant/
+│       └── app.py
+│
+├── evals/
+│   └── run_evals.py
+│
+├── .gitignore
+├── README.md
+├── pyproject.toml
+├── requirements.txt
+└── uv.lock
+```
+
+*Simplified overview; the project may contain additional source modules and configuration files.*
+
+---
+
 <div align="center">
 
-# 🌟 BUILT FOR INTELLIGENT RESEARCH
+# 🌌 THE FUTURE OF RESEARCH IS COLLABORATIVE
 
-**MULTI-AGENT AI • WEB INTELLIGENCE • SOURCE-GROUNDED ANSWERS**
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=22&duration=2400&pause=500&color=8B5CF6&center=true&vCenter=true&width=800&height=70&lines=THINK.;SEARCH.;WRITE.;VERIFY.;DELIVER+BETTER+ANSWERS." alt="Research workflow animation" />
 
-<br/>
+**BUILT WITH PYTHON · LANGGRAPH · GROQ · TAVILY**
 
-*Powered by Python, LangGraph, Groq and Tavily.*
+![Research](https://img.shields.io/badge/FOCUS-INTELLIGENT_RESEARCH-00D9FF?style=for-the-badge&labelColor=101426)
+![Architecture](https://img.shields.io/badge/ARCHITECTURE-MULTI--AGENT-8B5CF6?style=for-the-badge&labelColor=101426)
+
+*Turning questions into structured, source-grounded research.*
 
 </div>
